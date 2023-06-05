@@ -1,4 +1,7 @@
 # Hyscalar
+
+assignment
+
 # Project Name
 
 Multi-page Registration Form
@@ -11,7 +14,7 @@ Multi-page Registration Form
 
 ## Project Description
 
-This project is a web application that includes three forms: Registration Form, Educational Details Form, and Document Upload Form. The forms are designed to collect user information, educational details, and document uploads. The application includes client-side validation to ensure data integrity and prevent incorrect or incomplete form submissions.
+This project is a web application that includes three forms: Registration Form, Educational Details Form, and Document Upload Form. The forms are designed to collect user information, educational details, and document uploads. The application includes client-side validation to ensure data integrity and prevent incorrect or incomplete form submissions. All student details are save in the local storage user can see it in browser when click on application and local storage
 
 ## Features
 
