@@ -1,0 +1,17 @@
+body{
+    background: url("/image/bg.png") , -webkit-linear-gradient(bottom,#0250c5,#d43f8d);
+}
+
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.btn:hover {
+  background-color: #7740c4;
+ 
+}
+
+
+

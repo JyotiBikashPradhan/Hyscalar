@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educatonal deatils form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-5 mx-auto my-5">
+            <div class="card">
+                <div class="card-header text-center bg-info">
+                    <h2>
+                        Educatonal deatils
+                    </h2>
+
+                </div>
+                <div class="card-body">
+                    <form id="edu" onsubmit="validateDetails(event)">
+                        <!-- <form action="/Document_upload.html" onsubmit="validateDetails(event)"> -->
+
+                        <!-- second page -->
+
+                        <div class="mb-1">
+                            <label>HSC Institution Name</label><span class="text-danger">*</span>
+                            <input type="text" name="hsc_institution" id="hsc_institution"
+                                placeholder="HSC Institution Name" class="form-control">
+                            <label class="text-danger" id="hsc_institution_error"></label>
+                        </div>
+
+                        <div class="row mb-1">
+                            <div class="col">
+                                <label>HSC Board</label><span class="text-danger">*</span>
+                                <select name="hsc_board" id="hsc_board" class="form-select">
+                                    <option value="">Select HSC Board</option>
+                                    <option value="CBSC">CBSC</option>
+                                    <option value="ICSC">ICSC</option>
+                                    <option value="State Board">State Board</option>
+                                </select>
+                                <label class="text-danger" id="hsc_board_error"></label>
+                            </div>
+
+                            <div class="col">
+                                <label>Score in HSC (%)</label><span class="text-danger">*</span>
+                                <input type="number" name="hsc_score" id="hsc_score" placeholder="Score in HSC (%)"
+                                    class="form-control">
+                                <label class="text-danger" id="hsc_score_error"></label>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <label>SSC Institution Name</label><span class="text-danger">*</span>
+                            <input type="text" name="ssc_institution" id="ssc_institution"
+                                placeholder="SSC Institution Name" class="form-control">
+                            <label class="text-danger" id="ssc_institution_error"></label>
+                        </div>
+
+                        <div class="row mb-1">
+                            <div class="col">
+                                <label>SSC Board</label><span class="text-danger">*</span>
+                                <select name="ssc_board" id="ssc_board" class="form-select">
+                                    <option value="">Select SSC Board</option>
+                                    <option value="CBSC">CBSC</option>
+                                    <option value="ICSC">ICSC</option>
+                                    <option value="State Board">State Board</option>
+                                </select>
+                                <label class="text-danger" id="ssc_board_error"></label>
+
+                            </div>
+                            <div class="col">
+
+                                <div class="mb-1">
+                                    <label>Score in SSC (%)</label><span class="text-danger">*</span>
+                                    <input type="number" name="ssc_score" id="ssc_score" placeholder="Score in SSC (%)"
+                                        class="form-control">
+                                    <label class="text-danger" id="ssc_score_error"></label>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="mb-1">
+                            <label>Currently Pursuing</label>
+                            <input type="text" name="currently_pursuing" id="currently_pursuing"
+                                placeholder="Currently Pursuing" class="form-control">
+                            <label class="text-danger" id="currently_pursuing_error"></label>
+                        </div>
+
+                        <div class="mb-1">
+                            <label>Current Educational Institution Name</label>
+                            <input type="text" name="current_institution" id="current_institution"
+                                placeholder="Current Educational Institution Name" class="form-control">
+                            <label class="text-danger" id="current_institution_error"></label>
+
+                        </div>
+
+                        <div class="row mb-1">
+                            <div class="col">
+                                <label>Overall Percentage</label><span class="text-danger">*</span>
+                                <input type="number" name="overall_percentage" id="overall_percentage"
+                                    placeholder="Overall Percentage" class="form-control" >
+                                <label class="text-danger" id="overall_percentage_error"></label>
+                            </div>
+
+                            <div class="col">
+                                <label>Current Backlogs (if any)</label>
+                                <input type="number" name="current_backlogs" id="current_backlogs"
+                                    placeholder="Current Backlogs (if any)" class="form-control" >
+                                <label class="text-danger" id="current_backlogs_error"></label>
+                            </div>
+                        </div>
+
+
+                        <div class="my-2 btns-group">
+                            <!-- <a href="/registratiion.html">
+                                <input type="submit" value="Next" class="btn btn-info ">
+                              </a> -->
+                              <button type="button" class="btn btn-info w-100" id="backButton" onclick="goBack()">Previous</button>
+                              <button type="submit" class="btn btn-info w-100">Next</button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+        function goBack() {
+          history.go(-1);
+        }
+      </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="/validator.js"></script>
+</body>
+
+</html>

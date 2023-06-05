@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="successMessage" class="text-dark text-center"></div>
+    <div class="row">
+        <div class="col-md-5 mx-auto my-5">
+
+            <div class="card">
+                <div class="card-header text-center bg-info">
+                    <h2>Home page</h2>
+                </div>
+                <div class="card-body">
+                    <form id="form">
+
+
+                        <!-- <form id="form" action="/educational_details.html" onsubmit="validate(event)"> -->
+                        <div class="mb-1">
+                            <label>Name</label><span class="text-danger">*</span>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" name="first_name" id="first_name" placeholder="First"
+                                        class="form-control">
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="last_name" id="last_name" placeholder="Last"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <label class="text-danger" id="name_error"></label>
+                        </div>
+
+                        <div class="mb-1">
+                            <label>Date of Birth</label><span class="text-danger">*</span>
+                            <input type="date" name="dob" id="dob" class="form-control" placeholder="MM/DD/YYYY">
+                                <!-- autocomplete="off"> -->
+                            <label class="text-danger" id="dob_error"></label>
+                        </div>
+
+                        <div class="mb-1">
+                            <label>Email</label><span class="text-danger">*</span>
+                            <input type="email" name="email" id="email" class="form-control">
+                            <label class="text-danger" id="email_error"></label>
+                        </div>
+
+                        <div class="mb-1">
+                            <label>Father's name</label><span class="text-danger">*</span>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" name="father_first_name" id="father_first_name"
+                                        placeholder="First" class="form-control">
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="father_last_name" id="father_last_name" placeholder="Last"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <label class="text-danger" id="father_name_error"></label>
+                        </div>
+
+                        <div class="mb-1">
+                            <label>Mother's name</label><span class="text-danger">*</span>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" name="mother_first_name" id="mother_first_name"
+                                        placeholder="First" class="form-control">
+                                </div>
+                                <div class="col">
+                                    <input type="text" name="mother_last_name" id="mother_last_name" placeholder="Last"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <label class="text-danger" id="mother_name_error"></label>
+                        </div>
+
+                        <div class="mb-1">
+                            <label>Gender</label><span class="text-danger">*</span>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                                    <label class="form-check-label" for="male">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="female"
+                                        value="female">
+                                    <label class="form-check-label" for="female">Female</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                                    <label class="form-check-label" for="other">Other</label>
+                                </div>
+                            </div>
+                            <label class="text-danger" id="gender_error"></label>
+                        </div>
+                        <div class="mb-1">
+                            <label>Nationality</label><span class="text-danger">*</span>
+                            <input type="text" name="nationality" id="nationality" class="form-control">
+                            <label class="text-danger" id="nationality_error"></label>
+                        </div>
+
+                        <div class="mb-1">
+                            <label>Home Address</label><span class="text-danger">*</span>
+                            <input type="text" name="address" id="address" placeholder="Street address"
+                                class="form-control">
+                            <label class="text-danger" id="address_error"></label>
+
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" name="city" id="city" placeholder="City" class="form-control">
+                                    <label class="text-danger" id="city_error"></label>
+                                </div>
+                                <div class="col">
+                                    <!-- <div class="dropdown">
+                                            <button class="btn btn-light dropdown-toggle btn-outline-dark w-100 "
+                                                type="button" id="countryDropdown" data-bs-toggle="dropdown"
+                                                aria-expanded="false">Country</button>
+                                            <ul class="dropdown-menu" aria-labelledby="countryDropdown">
+                                                <li><a class="dropdown-item" href="#">Afghanistan</a></li>
+                                                <li><a class="dropdown-item" href="#">Albania</a></li>
+                                            </ul>
+                                        </div> -->
+                                    <select name="Country" id="country" class="form-select">
+                                        <option value="">Country</option>
+                                        <option value="in">India</option>
+                                        <option value="America">America</option>
+                                        <option value="newzialand">Newzialand</option>
+                                    </select>
+                                    <label class="text-danger" id="country_error"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-1">
+                            <label>Telephone-Home</label>
+                            <input type="phone" name="telephone_home" id="telephone_home" class="form-control"
+                                placeholder="### ### ####">
+                            <label class="text-danger" id="telephone_home_error"></label>
+                        </div>
+
+                        <div class="mb-1">
+                            <label>Telephone-Mobile</label><span class="text-danger">*</span>
+                            <input type="phone" name="telephone_mobile" id="telephone_mobile" class="form-control"
+                                placeholder="### ### ####">
+                            <label class="text-danger" id="telephone_mobile_error"></label>
+                        </div>
+
+                        <div class="my-2">
+                            <!-- <input type="submit" value="Next" class="btn btn-info w-100"> -->
+                            <button type="submit" class="btn btn-info w-100">Next</button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="/validator.js"></script>
+</body>
+
+</html>
